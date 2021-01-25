@@ -4,7 +4,6 @@ const hbs = require('hbs')
 const geocode = require('./utils/geocode')
 const forcast = require('./utils/weather_forecast')
 const forecast = require('./utils/weather_forecast')
-const { prototype } = require('events')
 
 const app = express()
 const port = process.env.PORT || 3000
@@ -90,6 +89,6 @@ app.get('*',(req,res)=>{
     })
 })
 
-app.listen(prototype, ()=>{
+app.listen(port, ()=>{
     console.log('Server is up on port '+ port)
 })
